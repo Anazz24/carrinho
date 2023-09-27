@@ -1,9 +1,27 @@
 import React from "react";
-import {Image} from 'react-native';
 
-import topo from "../../../assets/topo.png";
+import { StyleSheet, View } from "react-native";
 
-export default function Carrinho(){
+import Detalhe from "./components/Detalhe";
 
-    return <Image source={topo}/>
+import Topo from "./components/Topo";
+
+export default function Carrinho() {
+  return (
+    <>
+      <Topo />
+
+      <View style={estilos.carrinho}>
+        <Detalhe />
+      </View>
+    </>
+  );
 }
+
+const estilos = StyleSheet.create({
+  carrinho: {
+    paddingVertical: 8,
+
+    paddingHorizontal: 16,
+  },
+});
